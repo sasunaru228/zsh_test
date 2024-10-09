@@ -1,0 +1,79 @@
+.dataRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  padding: 6px 0;
+  border-bottom: 1px solid #E0E5EB;
+}
+.dataRow:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+.dataRow:hover .buttonDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dataRow .left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+}
+.dataRow .left span {
+  color: #1F2939;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 10px 12px;
+  background-color: transparent;
+}
+.dataRow .left span:nth-child(1) {
+  width: 48px;
+  color: #5E6674;
+}
+.dataRow .left span:nth-child(2) {
+  width: 120px;
+}
+.dataRow .left span:nth-child(3) {
+  width: 160px;
+}
+.dataRow .left span:nth-child(4) {
+  width: 128px;
+}
+.dataRow .left span:nth-child(5) {
+  width: 146px;
+}
+.dataRow .left span:nth-child(6) {
+  min-width: 430px;
+  width: auto;
+}
+.dataRow .left span:nth-child(7) {
+  width: 304px;
+  color: #5E6674;
+}
+.dataRow .buttonDelete {
+  background-color: #FEE3E3;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  align-items: center;
+  margin-right: 12px;
+}
+.dataRow .buttonDelete:hover {
+  background-color: #FED7D7;
+}
+.dataRow .buttonDelete:hover svg path {
+  fill: #9B2C2C;
+}
+.dataRow .buttonDelete svg {
+  background-color: transparent;
+}
+.dataRow .buttonDelete svg path {
+  fill: #C53030;
+}
+
+/*# sourceMappingURL=ViewCounterDataItem.module.css.map */

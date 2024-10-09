@@ -1,0 +1,13 @@
+.dataContainer {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+.dataContainer .content {
+  height: 500px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=ViewCounterData.module.css.map */

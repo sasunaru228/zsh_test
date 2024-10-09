@@ -1,0 +1,13 @@
+.meterType {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+}
+.meterType img {
+  background-color: transparent;
+}
+.meterTypeText {
+  width: auto !important;
+}
+
+/*# sourceMappingURL=MeterType.module.css.map */

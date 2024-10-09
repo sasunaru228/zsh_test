@@ -1,0 +1,92 @@
+
+1. Список счётчиков.
+Счётчики получать запросом GET http://showroom.eis24.me/api/v4/test/meters/
+Параметры limit=20 и offset (выводить по 20 на страницу).
+Данные должны выводиться на странице с внутренним скроллом
+(«шапка» фиксированная, табличка скроллится внутри).
+Колонки:
+1. Порядковый номер.
+2. Тип (ColdWaterAreaMeter — ХВС, HotWaterAreaMeter — ГВС).
+3. Дата установки в формате дд.мм.гггг.
+4. Автоматический ли он (is_automatic).
+5. Значение (initial_values).
+6. Адреc.
+7. Примечание (description).
+
+2. Адрес счётчика.
+Адреса получать параллельным запросом
+GET http://showroom.eis24.me/api/v4/test/areas/ с параметром списка айди id__in.
+Продумать оптимизацию, не запрашивать уже известные адреса.
+Выводить улицу, дом, номер квартиры.
+
+3. Удаление счётчика.
+При наведении на строку должна появляться кнопка удаления, инициирующая
+удаление счётчика (DELETE http://showroom.eis24.me/api/v4/test/meters/:meterId/).
+На странице при этом всегда должно оставаться 20 элементов.
+
+
+
+{
+  "count": 1191,
+  "next": "http://showroom.eis24.me/api/v4/test/meters/?limit=20&offset=60",
+  "previous": "http://showroom.eis24.me/api/v4/test/meters/?limit=20&offset=20",
+  "results": [
+    {
+      "id": "526a0caae0e34c3e6dda9bea",
+      "_type": [
+        "HotWaterAreaMeter",
+        "AreaMeter"
+      ],
+      "area": {
+        "id": "526237d3e0e34c524382c14a"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6a864c0360001ed0f07",
+      "description": "214",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [
+        160
+      ]
+    },
+    {
+      "id": "526a0caae0e34c3e6dda9bf1",
+      "_type": [
+        "ColdWaterAreaMeter",
+        "AreaMeter"
+      ],
+      "area": {
+        "id": "526237d3e0e34c524382c152"
+      },
+      "is_automatic": null,
+      "communication": "5b20f6bb64c0360001ed10e1",
+      "description": "83",
+      "serial_number": "",
+      "installation_date": "2010-06-01T00:00:00",
+      "brand_name": null,
+      "model_name": null,
+      "initial_values": [
+        0
+      ]
+    }
+
+
+
+
+
+      {
+          "id": "526237d3e0e34c524382c14a",
+          "number": 108,
+          "str_number": "108",
+          "str_number_full": "РєРІ. 108",
+          "house": {
+              "address": "Рі РЎР°РЅРєС‚-РџРµС‚РµСЂР±СѓСЂРі, СѓР» Р§СѓРґРµСЃ, Рґ 256",
+              "id": "526237d1e0e34c524382c073",
+              "fias_addrobjs": [
+                  "c2deb16a-0330-4f05-821f-1d09c93331e6",
+                  "92d0675e-d7ba-41f1-a602-101ec538d42e"
+              ]
+          }
+      }
